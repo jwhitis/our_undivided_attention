@@ -1,0 +1,9 @@
+development:
+  facebook_app_id: abc123
+  google_analytics_id: abc123
+production:
+  facebook_app_id: abc123
+  google_analytics_id: abc123
+test:
+  facebook_app_id: abc123
+  google_analytics_id: abc123

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Benchmarks</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= render "layouts/open_graph_meta_tags" %>
+  <%= csrf_meta_tags %>
+  <%#= favicon_link_tag "favicon.png" %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,400,700" %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <% if Rails.env.production? %>
+    <%= render "layouts/google_analytics" %>
+  <% end %>
+</head>
+<body>
+  <%= render "layouts/facebook_js" %>
+  <%= render "layouts/flash" %>
+
+  <nav>
+    <%= link_to "Home", root_path %>
+    <%= fa_icon("star") %>
+    <%= link_to "Tour Dates", "#tour-dates" %>
+    <%= fa_icon("star") %>
+    <%= link_to "Benchmarks Store", "http://benchmarks.bandcamp.com" %>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <footer>
+    &copy; <%= Time.now.year %> Benchmarks
+    <%= fa_icon("star") %>
+    <%= mail_to "hello@benchmarksmusic.com" %>
+  </footer>
+</body>
+</html>
