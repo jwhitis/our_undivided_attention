@@ -18,17 +18,21 @@
   <%= render "layouts/facebook_js" %>
   <%= render "layouts/flash" %>
 
-  <nav>
-    <%= link_to "Home", root_path %>
-    <%= fa_icon("star") %>
-    <%= link_to "Tour Dates", "#tour-dates" %>
-    <%= fa_icon("star") %>
-    <%= link_to "Benchmarks Store", "http://benchmarks.bandcamp.com" %>
-  </nav>
+  <header>
+    <div class="container">
+      <%= link_to root_path, id: "logo" do %>
+        <%= image_tag asset_path("logo_mini.png") %>
+      <% end %>
 
-  <div class="container">
-    <%= yield %>
-  </div>
+      <nav>
+        <%= link_to "Shows", "javascript:void(0)" %>
+        <%= link_to "Songs", "javascript:void(0)" %>
+        <%= link_to "Store", "http://benchmarks.bandcamp.com" %>
+      </nav>
+    </div>
+  </header>
+
+  <%= yield %>
 
   <footer>
     &copy; <%= Time.now.year %> Benchmarks
