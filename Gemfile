@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.0'
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
@@ -7,7 +12,7 @@ gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'pry-rails', group: [:development, :test]
 gem 'puma', '~> 3.0'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.0.1'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0'
 gem 'sm_app_config'
