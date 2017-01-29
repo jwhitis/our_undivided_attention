@@ -3,81 +3,67 @@
 @import "font-awesome";
 @import "variables";
 @import "layouts";
-@import "flash";
+@import "main";
 @import "tour_dates";
-
-h2 {
-  margin: 20px 0;
-  text-align: center;
-  font-family: $display-font;
-  font-size: 34px;
-  text-transform: uppercase;
-  color: $dark-red;
-}
 
 a:hover, a:focus {
   text-decoration: none;
 }
 
-small {
-  margin: 5px auto 20px auto;
-  display: block;
-  color: #777777;
+.container {
+  max-width: 750px;
 }
 
-input[type="email"], input[type="submit"], button:not(.close), a.button {
-  width: 100%;
-  height: 40px;
-  padding: 10px 15px;
-  display: inline-block;
-  border: 1px solid rgba(black, .15);
-  border-radius: 4px;
-  font-size: 18px;
-  line-height: 20px;
-  background-color: #EEEEEE;
-  -webkit-appearance: none;
-}
-
-input[type="submit"], button:not(.close), a.button {
-  text-align: center;
-  border-width: 0 0 2px 0;
-  font-family: $display-font;
+.title {
+  margin: 30px 0 20px 0;
+  font-size: 30px;
+  font-weight: bold;
   text-transform: uppercase;
-  color: white;
-  background-color: #999999;
-  box-shadow: 0 1px 3px rgba(black, .25);
-  transition: opacity .3s;
+  color: $blue;
+}
+
+.button, .button:focus {
+  display: block;
+  border: 3px solid $pink;
+  font-size: 20px;
+  line-height: 3em;
+  letter-spacing: .25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $pink;
+  transition: color .3s, background-color .3s;
 
   &:hover {
-    opacity: .8;
-  }
-
-  i.fa {
-    margin-right: 6px;
-    font-size: 20px;
-    line-height: 19px;
+    color: white;
+    background-color: $pink;
   }
 }
 
 div#tour-dates {
-  a.bit-buy-tix, label.bit-uiButton {
-    @extend a.button;
-    height: 30px;
+  label.bit-uiButton {
+    @extend .button;
+    width: 80px;
+    height: auto;
     margin: 0;
-    padding: 5px 10px;
+    padding: 0 0 0 5px;
+    border-width: 2px;
+    font-family: $body-font;
     font-size: 14px;
-    line-height: 20px !important;
+    line-height: 1.7em !important;
+    background: transparent;
 
     a {
-      color: white;
+      float: none;
+      color: $pink !important;
+      transition: color .3s;
+    }
+
+    &:hover a {
+      color: white !important;
     }
   }
+}
 
-  a.bit-buy-tix {
-    background-color: $dark-red;
-  }
-
-  label.bit-uiButton {
-    background: $dark-blue;
-  }
+.fa {
+  letter-spacing: 0;
 }

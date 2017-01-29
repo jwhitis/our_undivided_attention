@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Benchmarks</title>
-  <meta name="description" content="" />
+  <meta name="description" content="The official Benchmarks website. New album OUR UNDIVIDED ATTENTION available March 24, 2017." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= render "layouts/open_graph_meta_tags" %>
   <%= csrf_meta_tags %>
@@ -21,13 +21,16 @@
   <header>
     <div class="container">
       <%= link_to root_path, id: "logo" do %>
-        <%= image_tag asset_path("logo_mini.png") %>
+        <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/logo_mini.png" %>
       <% end %>
 
       <nav>
-        <%= link_to "Shows", "javascript:void(0)" %>
-        <%= link_to "Songs", "javascript:void(0)" %>
+        <%= link_to "Tour", "#tour" %>
         <%= link_to "Store", "http://benchmarks.bandcamp.com" %>
+        <%= link_to fa_icon("facebook"), "https://www.facebook.com/benchmarksmusic", target: "_blank" %>
+        <%= link_to fa_icon("twitter"), "https://twitter.com/benchmarksmusic", target: "_blank" %>
+        <%= link_to fa_icon("instagram"), "https://www.instagram.com/benchmarksmusic", target: "_blank" %>
+        <%= link_to fa_icon("spotify"), "https://open.spotify.com/artist/6NdHwt2sLPmAWR8FNSDfJC", target: "_blank" %>
       </nav>
     </div>
   </header>
@@ -35,9 +38,19 @@
   <%= yield %>
 
   <footer>
-    &copy; <%= Time.now.year %> Benchmarks
-    <%= fa_icon("star") %>
-    <%= mail_to "hello@benchmarksmusic.com" %>
+    <div class="container">
+      &copy; <%= Time.now.year %> Benchmarks
+    </div>
   </footer>
 </body>
 </html>
+
+<script type="text/javascript">
+  $("a[href='#tour']").click(function(event) {
+    event.preventDefault();
+
+    $("html, body").animate({
+      scrollTop: $("div#tour").offset().top
+    }, 500);
+  });
+</script>

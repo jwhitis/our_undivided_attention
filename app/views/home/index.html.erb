@@ -1,9 +1,67 @@
-<h1>Welcome!</h1>
+<div id="main">
+  <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/video_thumbnail_mini.jpg", id: "video-thumbnail" %>
 
-<h2>Tour Dates</h2>
-<div id="tour-dates"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div id="new-album">
+          <h1 class="title">
+            The New Album
+            <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/album_title_mini.png" %>
+            <span class="sr-only">Our Undivided Attention</span>
+          </h1>
+          <p>Available March 24, 2017</p>
+          <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/album_cover_mini.jpeg", id: "album-cover" %>
+          <%= link_to "http://bit.ly/2j1SRfW", class: "button" do %>
+            Pre-Order <%= fa_icon("chevron-right") %>
+          <% end %>
+        </div>
 
+        <div id="tour">
+          <h2 class="title">Tour Dates</h2>
+          <div id="tour-dates"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="video-overlay">
+  <%= fa_icon("times") %>
+
+  <div class="container">
+    <div id="video-player"></div>
+  </div>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script type="text/javascript">
+  var video_id = 179668570;
+  var video_player = new Vimeo.Player("video-player", {
+    id: video_id,
+    byline: false,
+    color: "FFFFFF",
+    portrait: false,
+    title: false
+  });
+
+  $("img#video-thumbnail").click(function() {
+    $("div#video-overlay").fadeIn(100, function() {
+      $("body").css("overflow-y", "hidden");
+      video_player.play();
+    });
+  });
+
+  function closeVideo() {
+    $("div#video-overlay").fadeOut(100, function() {
+      $("body").css("overflow-y", "auto");
+      video_player.loadVideo(video_id);
+    });
+  }
+
+  video_player.on("ended", closeVideo);
+  $("div#video-overlay").click(closeVideo);
+
   var script = document.createElement("script");
   script.type = "text/javascript";
   script.src = "http://widget.bandsintown.com/javascripts/bit_widget.js";
@@ -11,9 +69,9 @@
   script.onload = function() {
     new BIT.Widget({
       artist: "Benchmarks",
-      text_color: "#555555",
-      link_color: "#C1223C",
-      separator_color: "#CCCCCC",
+      text_color: "#DDDDDD",
+      link_color: "#AE4077",
+      separator_color: "#DDDDDD",
       notify_me: false,
       share_links: false,
       div_id: "tour-dates"

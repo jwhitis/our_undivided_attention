@@ -1,13 +1,11 @@
 div#tour-dates {
-  padding-bottom: 20px;
-
   div.bit-widget-container {
     font-family: $body-font;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
   }
 
-  a.bit-track-artist-header, tr.bit-header, .bit-description-links, .bit-artist-event-link {
+  a.bit-track-artist-header, tr.bit-header, .bit-description-links, .bit-artist-event-link, .bit-tickets {
     display: none !important;
   }
 
@@ -22,7 +20,7 @@ div#tour-dates {
   }
 
   @media (max-width: 767px) {
-    td.bit-rsvp {
+    div.lineup, td.bit-rsvp {
       display: none;
     }
   }
