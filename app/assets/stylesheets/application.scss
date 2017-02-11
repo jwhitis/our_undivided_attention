@@ -10,32 +10,59 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+section {
+  padding: 30px 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 90px 0;
+  }
+}
+
 .container {
   max-width: 750px;
 }
 
 .title {
-  margin: 30px 0 20px 0;
-  font-size: 30px;
+  margin: 0 0 10px 0;
+  font-size: 9vw;
+  line-height: 1.3em;
   font-weight: bold;
   text-transform: uppercase;
   color: $blue;
 }
 
-.button, .button:focus {
-  display: block;
+@media (min-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+.button {
+  display: inline-block;
   border: 3px solid $pink;
-  font-size: 20px;
+  font-size: 6vw;
   line-height: 3em;
-  letter-spacing: .25em;
+  letter-spacing: .2em;
   font-weight: bold;
   text-transform: uppercase;
   color: $pink;
   transition: color .3s, background-color .3s;
 
   &:hover {
-    color: white;
+    color: #EEEEEE;
     background-color: $pink;
+  }
+
+  &:focus {
+    color: $pink;
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 25px;
   }
 }
 
@@ -59,7 +86,7 @@ div#tour-dates {
     }
 
     &:hover a {
-      color: white !important;
+      color: #EEEEEE !important;
     }
   }
 }

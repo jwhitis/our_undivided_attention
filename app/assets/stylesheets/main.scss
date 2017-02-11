@@ -1,29 +1,53 @@
 div#main {
-  img#video-thumbnail {
+  img, a.button {
     width: 100%;
+  }
+
+  img#still-frame {
     cursor: pointer;
   }
 
-  h1 {
-    margin-bottom: 0;
-    line-height: 1.3em;
+  section#new-album {
+    padding-left: 5px;
+    padding-right: 5px;
 
-    img {
-      max-width: 100%;
-      width: 400px;
+    h1.title {
+      margin-bottom: 0;
     }
   }
 
   p {
-    margin: -15px 0 20px 0;
-  }
-
-  img#album-cover {
-    width: 100%;
+    font-size: 5vw;
+    line-height: 2em;
+    color: #CCCCCC;
   }
 
   a.button {
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
+
+    i.fa-chevron-right {
+      margin: 0 -5px;
+      position: relative;
+      top: -1px;
+      font-size: 85%;
+    }
+  }
+
+  img#stars {
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  div#main {
+    section#new-album {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    p {
+      font-size: 20px;
+    }
   }
 }
 
@@ -36,7 +60,6 @@ div#video-overlay {
   right: 0;
   z-index: 9999;
   display: none;
-  font-size: 30px;
   color: white;
   background-color: rgba(darken($blue, 10%), .9);
 
@@ -44,6 +67,7 @@ div#video-overlay {
     position: absolute;
     top: 10px;
     right: 15px;
+    font-size: 30px;
     cursor: pointer;
   }
 

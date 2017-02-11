@@ -7,7 +7,7 @@
   <%= render "layouts/open_graph_meta_tags" %>
   <%= csrf_meta_tags %>
   <%#= favicon_link_tag "favicon.png" %>
-  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" %>
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,700" %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   <% if Rails.env.production? %>
@@ -18,7 +18,7 @@
   <header>
     <div class="container">
       <%= link_to root_path, id: "logo" do %>
-        <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/logo_mini.png" %>
+        <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/logo_mini.png", alt: "Benchmarks" %>
       <% end %>
 
       <nav>
@@ -28,6 +28,7 @@
         <%= link_to fa_icon("twitter"), "https://twitter.com/benchmarksmusic", target: "_blank" %>
         <%= link_to fa_icon("instagram"), "https://www.instagram.com/benchmarksmusic", target: "_blank" %>
         <%= link_to fa_icon("spotify"), "https://open.spotify.com/artist/6NdHwt2sLPmAWR8FNSDfJC", target: "_blank" %>
+        <%= mail_to "benchmarksmusic@gmail.com", fa_icon("envelope") %>
       </nav>
     </div>
   </header>
@@ -47,7 +48,7 @@
     event.preventDefault();
 
     $("html, body").animate({
-      scrollTop: $("div#tour").offset().top
+      scrollTop: $("section#tour").offset().top
     }, 500);
   });
 </script>
