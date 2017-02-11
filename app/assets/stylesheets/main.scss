@@ -61,7 +61,7 @@ div#video-overlay {
   z-index: 9999;
   display: none;
   color: white;
-  background-color: rgba(darken($blue, 10%), .9);
+  background-color: black;
 
   i.fa-times {
     position: absolute;
@@ -72,7 +72,7 @@ div#video-overlay {
   }
 
   div#video-player {
-    height: 400px;
+    height: 55vw;
 
     iframe {
       width: 100%;
@@ -83,6 +83,8 @@ div#video-overlay {
 
 @media (min-width: 768px) {
   div#video-overlay {
-    padding-top: 100px;
+    div#video-player {
+      height: 47vw;
+    }
   }
 }

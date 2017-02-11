@@ -6,7 +6,7 @@ div#tour-dates {
 
   div.bit-widget-container {
     font-family: $body-font;
-    font-size: 4vw;
+    font-size: 14px;
     font-weight: normal;
   }
 
@@ -23,18 +23,16 @@ div#tour-dates {
     font-family: $body-font;
     font-weight: normal;
   }
-
-  @media (max-width: 767px) {
-    div.lineup, td.bit-rsvp {
-      display: none;
-    }
-  }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   div#tour-dates {
     div.bit-widget-container {
-      font-size: 14px;
+      font-size: 4vw;
+    }
+
+    div.lineup, td.bit-rsvp {
+      display: none;
     }
   }
 }
