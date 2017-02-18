@@ -1,0 +1,7 @@
+<%= form_tag "//benchmarksmusic.us15.list-manage.com/subscribe/post?u=eb0f9183706606bc60c785e26&amp;id=a3e531a3c7", id: "mailing-list", class: "clearfix" do %>
+  <%= label_tag "mc-email", "Subscribe to get the latest news and tour dates!" %>
+  <%= email_field_tag "EMAIL", nil, placeholder: "Enter your email address", id: "mc-email" %>
+  <%= text_field_tag "b_eb0f9183706606bc60c785e26_a3e531a3c7", nil, tabindex: "-1",
+    "aria-hidden": true, id: "mc-token" %>
+  <%= submit_tag "Submit", class: "button" %>
+<% end %>

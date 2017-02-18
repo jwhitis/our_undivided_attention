@@ -5,6 +5,7 @@
 @import "layouts";
 @import "main";
 @import "tour_dates";
+@import "mailing_list";
 
 a:hover, a:focus {
   text-decoration: none;
@@ -40,6 +41,7 @@ section {
 }
 
 .button {
+  padding: 0;
   display: inline-block;
   border: 3px solid $pink;
   font-size: 6vw;
@@ -48,6 +50,7 @@ section {
   font-weight: bold;
   text-transform: uppercase;
   color: $pink;
+  background: transparent;
   transition: color .3s, background-color .3s;
 
   &:hover {
@@ -77,7 +80,6 @@ div#tour-dates {
     font-family: $body-font;
     font-size: 14px;
     line-height: 1.7em !important;
-    background: transparent;
 
     a {
       float: none;

@@ -35,6 +35,10 @@
 
   <%= yield %>
 
+  <div class="container">
+    <%= render "layouts/mailing_list" %>
+  </div>
+
   <footer>
     <div class="container">
       &copy; <%= Time.now.year %> Benchmarks

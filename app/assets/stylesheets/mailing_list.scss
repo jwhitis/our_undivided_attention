@@ -1,0 +1,49 @@
+form#mailing-list {
+  label {
+    font-size: 4.25vw;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  input#mc-email, input.button {
+    border-width: 2px;
+    font-size: 4vw;
+    line-height: 2.4em;
+  }
+
+  input#mc-email {
+    width: calc(70% - 10px);
+    padding: 0 10px;
+    float: left;
+    border-color: transparent;
+    outline: none;
+    color: #333333;
+    background-color: #EEEEEE;
+  }
+
+  input#mc-token {
+    position: absolute;
+    left: -9999px;
+  }
+
+  input.button {
+    width: 30%;
+    padding-left: 3px;
+    float: right;
+  }
+}
+
+@media (min-width: 768px) {
+  form#mailing-list {
+    width: 345px;
+    display: inline-block;
+
+    label {
+      font-size: 16px;
+    }
+
+    input#mc-email, input.button {
+      font-size: 14px;
+    }
+  }
+}
