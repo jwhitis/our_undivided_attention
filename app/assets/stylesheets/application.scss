@@ -60,36 +60,13 @@ section {
 
   &:focus {
     color: $pink;
+    background: transparent;
   }
 }
 
 @media (min-width: 768px) {
   .button {
     font-size: 25px;
-  }
-}
-
-div#tour-dates {
-  label.bit-uiButton {
-    @extend .button;
-    width: 80px;
-    height: auto;
-    margin: 0;
-    padding: 0 0 0 5px;
-    border-width: 2px;
-    font-family: $body-font;
-    font-size: 14px;
-    line-height: 1.7em !important;
-
-    a {
-      float: none;
-      color: $pink !important;
-      transition: color .3s;
-    }
-
-    &:hover a {
-      color: #EEEEEE !important;
-    }
   }
 }
 
