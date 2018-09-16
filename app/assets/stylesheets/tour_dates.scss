@@ -1,38 +1,31 @@
-div#tour-dates {
-  th {
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-
+section#tour {
   div.bit-widget-container {
-    font-family: $body-font;
-    font-size: 14px;
-    font-weight: normal;
+    text-align: left;
   }
 
-  a.bit-track-artist-header, tr.bit-header, .bit-description-links, .bit-artist-event-link, .bit-tickets {
-    display: none !important;
+  div.bit-widget {
+    padding: 0;
   }
 
-  .bit-date {
-    padding-left: 8px;
-    white-space: nowrap;
+  div.bit-nav-bar-container {
+    display: none;
   }
 
-  td.bit-location {
-    font-family: $body-font;
-    font-weight: normal;
+  div.bit-upcoming-events {
+    margin: 0;
   }
-}
 
-@media (max-width: 767px) {
-  div#tour-dates {
-    div.bit-widget-container {
-      font-size: 4vw;
-    }
+  div.bit-event {
+    padding: 10px 0;
+  }
 
-    div.lineup, td.bit-rsvp {
-      display: none;
-    }
+  a.bit-button {
+    width: 120px;
+    line-height: 40px;
+    letter-spacing: .05em;
+  }
+
+  div.bit-rsvp-container {
+    display: none;
   }
 }

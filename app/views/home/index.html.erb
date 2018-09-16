@@ -9,11 +9,10 @@
           <h1 class="title">The New Album</h1>
           <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/album_title_mini.png",
             alt: "Our Undivided Attention" %>
-          <p>Available Now</p>
           <%= image_tag "http://our-undivided-attention.s3.amazonaws.com/album_cover_mini.jpg",
             alt: "Album cover art" %>
           <%= link_to "http://bit.ly/2j1SRfW", class: "button" do %>
-            Pre-Order <%= fa_icon("chevron-right") %>
+            Order Now <%= fa_icon("chevron-right") %>
           <% end %>
         </section>
 
@@ -22,7 +21,20 @@
 
         <section id="tour">
           <h1 class="title">Tour Dates</h1>
-          <div id="tour-dates"></div>
+          <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+          <a
+            class="bit-widget-initializer"
+            data-artist-name="Benchmarks"
+            data-display-local-dates="false"
+            data-display-past-dates="false"
+            data-auto-style="false"
+            data-text-color="#DDDDDD"
+            data-link-color="#AE4077"
+            data-popup-background-color="rgba(0,0,0,0)"
+            data-background-color="rgba(0,0,0,0)"
+            data-display-limit=""
+            data-link-text-color="#FFFFFF">
+          </a>
         </section>
       </div>
     </div>
@@ -61,21 +73,4 @@
 
   video_player.on("ended", closeVideo);
   $("div#video-overlay").click(closeVideo);
-
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "http://widget.bandsintown.com/javascripts/bit_widget.js";
-  script.id = "bit-js";
-  script.onload = function() {
-    new BIT.Widget({
-      artist: "Benchmarks",
-      text_color: "#DDDDDD",
-      link_color: "#AE4077",
-      separator_color: "#DDDDDD",
-      notify_me: false,
-      share_links: false,
-      div_id: "tour-dates"
-    }).insert_events();
-  }
-  document.getElementsByTagName("head")[0].appendChild(script);
 </script>

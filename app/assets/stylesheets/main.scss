@@ -14,12 +14,10 @@ div#main {
     h1.title {
       margin-bottom: 0;
     }
-  }
 
-  p {
-    font-size: 5vw;
-    line-height: 2em;
-    color: #CCCCCC;
+    img + img {
+      margin-top: 10px;
+    }
   }
 
   a.button {
@@ -43,10 +41,6 @@ div#main {
     section#new-album {
       padding-left: 30px;
       padding-right: 30px;
-    }
-
-    p {
-      font-size: 20px;
     }
   }
 }
