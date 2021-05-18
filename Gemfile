@@ -11,7 +11,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'pry-rails', group: [:development, :test]
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.0.1'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0'
